@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: #444444;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  min-width: 1024px;
+  min-height: 640px;
+  color: #474f5f;
+}
+#app {
+  background: #0085c3;
+}
+#app #viewport {
+  top: 10px; right: 10px; bottom: 10px; left: 80px;
+  border: solid 1px #71c6c1;
+}
+#app #viewport > [panel-view] {
+  background: #e8eaee;
+}
+#app > #viewport > [panel-view]#one {
+  z-index: 100;
+  width: 700px;
+}
+#app > #viewport > [panel-view]#two {
+  z-index: 200;
+  width: 800px;
+  right: -800px;
+}
+#app > #viewport > [panel-view]#three {
+  z-index: 300;
+  width: 600px;
+  right: -600px;
+}
+#app > #viewport > [panel-view]#four {
+  z-index: 400;
+  width: 730px;
+  right: -730px;
+}
+#app #viewport > [panel-view] > div {
+  padding: 10px;
+}
+#app #viewport > [panel-view] > div h1 {
+  margin-top: 0;
+  font-weight: normal;
+}

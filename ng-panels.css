@@ -1,0 +1,52 @@
+#app {
+  position: relative;
+  min-width: 758px;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Viewport */
+#app #viewport {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}
+#app #viewport > [panel-view] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-duration: .25s;
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+}
+#app > #viewport > [panel-view].active {
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+/* Panel Mask */
+#app #viewport > [panel-view] .navigation-mask {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  cursor: default;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition-property: background;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-duration: .25s;
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+}
+#app #viewport > [panel-view] .navigation-mask:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* Panel Scroller */
+#app #viewport > [panel-view] .scroller {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

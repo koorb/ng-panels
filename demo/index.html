@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="ngPanelsDemo">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>ngPanels</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="../ng-panels.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="../ng-panels.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <div id="app">
+      <div id="viewport">
+        <section panel-view panel-options="panels.one" id="one">
+          <div>
+            <h1>Panel One</h1>
+            <button ng-click="openPanelTwo()">Open panel two</button>
+          </div>
+        </section>
+        <section panel-view panel-options="panels.two" id="two">
+          <div>
+            <h1>Panel Two</h1>
+            <img src="http://placehold.it/650x350" />
+            <p>
+              <a href="#" ng-click="openPanelThree()">Open panel three</a>
+            </p>
+          </div>
+        </section>
+        <section panel-view panel-options="panels.three" id="three">
+          <div>
+            <h1>Panel Three</h1>
+            <p>The third panel. <button ng-click="openPanelFour()">Go to four</button></p>
+          </div>
+        </section>
+        <section panel-view panel-options="panels.four" id="four">
+          <div>
+            <h1>Panel Four</h1>
+            <p>Fantastic panel four</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+
+</html>
