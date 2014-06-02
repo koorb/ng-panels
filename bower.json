@@ -7,6 +7,10 @@
   ],
   "description": "AngularJS Panel UI",
   "main": ["./ng-panels.js", "./ng-panels.css"],
+  "dependencies": {
+    "angular": ">=1.2.1",
+    "jquery": ">=1.6.4"
+  },
   "keywords": [
     "angularjs",
     "ui",
