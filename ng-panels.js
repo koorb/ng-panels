@@ -12,13 +12,15 @@ angular.module('ngPanels', [])
       controller: function($scope, $element, $attrs) {
         $element.addClass('ng-panel-view');
 
-        $scope.$watch('panelOptions.active', function (isActive, wasActive) {
-          if (isActive) {
-            $element.addClass('active');
-          } else {
-            $element.removeClass('active');
-          }
-        });
+        if (!$element.hasClass('panel-static')) {
+          $scope.$watch('panelOptions.active', function (isActive, wasActive) {
+            if (isActive) {
+              $element.addClass('active');
+            } else {
+              $element.removeClass('active');
+            }
+          });
+        }
 
         $scope.$watch('panelOptions.masked', function (isMasked, wasMasked) {
           if (isMasked) {
