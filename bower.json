@@ -3,13 +3,12 @@
   "version": "0.0.2",
   "homepage": "https://github.com/koorb/ngPanels",
   "authors": [
-    "Richard Standbrook <richard@themilkshed.co.uk>"
+    "Richard Standbrook <@richstandbrook>"
   ],
   "description": "AngularJS Panel UI",
   "main": ["./ng-panels.js", "./ng-panels.css"],
   "dependencies": {
-    "angular": ">=1.2.1",
-    "jquery": ">=1.6.4"
+    "angular": ">=1.2.1"
   },
   "keywords": [
     "angularjs",
