@@ -1,0 +1,25 @@
+{
+  "name": "ngPanels",
+  "version": "0.0.3",
+  "description": "AngularJS Panel UI",
+  "main": "src/ng-panel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koorb/ngPanels.git"
+  },
+  "author": "Rich Standbrook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koorb/ngPanels/issues"
+  },
+  "homepage": "https://github.com/koorb/ngPanels",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
+    "gulp-less": "^2.0.1",
+    "gulp-ng-annotate": "^0.4.4"
+  }
+}

@@ -3,4 +3,4 @@ ngPanel provides the `panel-view` directive to create slide-out panels great to 
 ![ngPanel demo](example/ng-panels-demo.gif)
 
 
-(Service and usage coming soon – for now take a look in the example directory)
+(Usage coming soon – for now take a look in the example directory)

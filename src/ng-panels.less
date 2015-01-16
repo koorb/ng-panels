@@ -1,0 +1,87 @@
+.ng-panel-view {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-duration: .25s;
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+
+  &.active {
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+  }
+
+  .ng-panel-mask {
+    /* Panel Mask */
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+    transition-property: background;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    transition-duration: .25s;
+    -webkit-transition-duration: .25s;
+    -moz-transition-duration: .25s;
+
+    &.ng-leave {
+      opacity: 1;
+      -webkit-transition: opacity .2s ease-in-out;
+         -moz-transition: opacity .2s ease-in-out;
+          -ms-transition: opacity .2s ease-in-out;
+           -o-transition: opacity .2s ease-in-out;
+              transition: opacity .2s ease-in-out;
+
+      &.ng-leave-active {
+        opacity: 0;
+      }
+    }
+
+    &.ng-enter {
+      opacity: 0;
+      -webkit-transition: opacity .2s ease-in-out;
+         -moz-transition: opacity .2s ease-in-out;
+          -ms-transition: opacity .2s ease-in-out;
+           -o-transition: opacity .2s ease-in-out;
+              transition: opacity .2s ease-in-out;
+
+      &.ng-enter-active {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .scroller {
+    /* Panel Scroller */
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+/* Helpers */
+.ng-panel-app {
+  position: relative;
+  min-width: 758px;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ng-panel-viewport {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}

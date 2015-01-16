@@ -1,12 +1,12 @@
 {
   "name": "ngPanels",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/koorb/ngPanels",
   "authors": [
-    "Richard Standbrook <@richstandbrook>"
+    "Rich Standbrook <@richstandbrook>"
   ],
   "description": "AngularJS Panel UI",
-  "main": ["./ng-panels.js", "./ng-panels.css"],
+  "main": ["./dist/ng-panels.js", "./dist/ng-panels.css"],
   "dependencies": {
     "angular": ">=1.2.1"
   },
@@ -15,7 +15,7 @@
     "ui",
     "panel"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "ignore": [
     "**/.*",
     "node_modules",
