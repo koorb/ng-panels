@@ -3,47 +3,67 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>ngPanels</title>
-    <link rel="stylesheet" href="../ng-panels.css" />
+    <title>ng-panels</title>
+    <link rel="stylesheet" href="../dist/ng-panels.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="https://code.angularjs.org/1.2.26/angular.js"></script>
     <script src="app.js"></script>
-    <script src="../ng-panels.js"></script>
+    <script src="../dist/ng-panels.js"></script>
   </head>
 
-  <body ng-controller="MainCtrl">
-    <div id="app">
-      <div id="viewport">
-        <section panel-view panel-options="panels.one" id="one">
-          <div>
-            <h1>Panel One</h1>
-            <button ng-click="openPanelTwo()">Open panel two</button>
-          </div>
-        </section>
-        <section panel-view panel-options="panels.two" id="two">
-          <div>
-            <h1>Panel Two</h1>
-            <img src="http://placehold.it/650x350" />
-            <p>
-              <a href="#" ng-click="openPanelThree()">Open panel three</a>
-            </p>
-          </div>
-        </section>
-        <section panel-view panel-options="panels.three" id="three">
-          <div>
-            <h1>Panel Three</h1>
-            <p>The third panel. <button ng-click="openPanelFour()">Go to four</button></p>
-          </div>
-        </section>
-        <section panel-view panel-options="panels.four" id="four">
-          <div>
-            <h1>Panel Four</h1>
-            <p>Fantastic panel four</p>
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
+  <body class="ng-panel-app" ng-controller="mainCtrl">
 
+    <div class="ng-panel-viewport">
+      <section class="panel-one panel-static" panel-view panel-options="panels.get('one')">
+        <div>
+          <h1>Panel One</h1>
+          <p><button ng-click="openPanelTwo()">Open panel two</button></p>
+          <img src="ng-panels-demo.gif">
+        </div>
+      </section>
+      <section class="panel-two" panel-view panel-options="panels.get('two')">
+        <div class="scroller">
+          <h1>Panel Two</h1>
+          <img src="http://placehold.it/650x350" />
+          <p>
+            <a href="#" ng-click="openPanelThree()">Open panel three</a>
+          </p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </section>
+      <section class="panel-three" panel-view panel-options="panels.get('three')">
+        <div>
+          <h1>Panel Three</h1>
+          <p>The third panel. <button ng-click="openPanelFour()">Go to four</button></p>
+        </div>
+      </section>
+      <section class="panel-four" panel-view panel-options="panels.get('four')">
+        <div>
+          <h1>Panel Four</h1>
+          <p>Fantastic panel four</p>
+        </div>
+      </section>
+    </div>
+
+  </body>
 </html>
