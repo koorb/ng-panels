@@ -2,6 +2,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
+
   transition-property: transform;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
@@ -72,15 +73,20 @@
 
 /* Helpers */
 .ng-panel-app {
-  position: relative;
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
   min-width: 758px;
   max-width: 1440px;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin: 0;
 }
 
 .ng-panel-viewport {
+  display: block;
+  box-sizing: border-box;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   overflow: hidden;
