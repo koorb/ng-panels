@@ -7,7 +7,7 @@
       return {
         restrict: 'EA',
         transclude: true,
-        template: '<div class="ng-panel-mask" ng-click="panelOptions.unmask()" ng-if="panelOptions.masked"></div><div ng-transclude></div>',
+        template: '<div ng-transclude></div><div class="ng-panel-mask" ng-click="panelOptions.unmask()" ng-if="panelOptions.masked"></div>',
         scope: {
           panelOptions: '=',
           path: '='
