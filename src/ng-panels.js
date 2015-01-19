@@ -28,8 +28,8 @@
           $scope.$watch('panelOptions.masked', function (isMasked, wasMasked) {
             if (isMasked) {
               $element.addClass('masked');
-              if ($element.css('right') !== 'auto') {
-                var x = $element.parent().width();
+              if ($element.css('right') !== 'auto' && !$element.hasClass('panel-static')) {
+                var x = $element.parent()[0].offsetWidth;
                 $element.css('transform', 'translate3d(-'+x+'px, 0, 0)');
                 $element.css('-webkit-transform', 'translate3d(-'+x+'px, 0, 0)');
                 $element.css('-moz-transform', 'translate3d(-'+x+'px, 0, 0)');
